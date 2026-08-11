@@ -174,6 +174,8 @@ quickdrop/
 │   ├── architecture/
 │   └── api/
 │
+│
+└── .gitignore
 └── README.md
 ```
 
