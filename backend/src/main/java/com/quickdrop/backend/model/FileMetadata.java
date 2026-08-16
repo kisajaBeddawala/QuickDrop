@@ -27,6 +27,7 @@ public class FileMetadata {
 
     @Column(nullable = false) private String originalFileName;
     @Column(nullable = false) private String cloudinaryPublicId;
+    @Column(nullable = false) private String fileUrl;
     @Column(nullable = false) private String resourceType;
     @Column private String contentType;
     @Column(nullable = false) private Long size;
