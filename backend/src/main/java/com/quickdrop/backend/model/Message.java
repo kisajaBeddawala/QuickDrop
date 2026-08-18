@@ -3,6 +3,8 @@ package com.quickdrop.backend.model;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -23,6 +25,8 @@ public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID) private UUID id;
 
+    // tell spring to not include this field when converting to json
+    @JsonIgnore
     // establishes the relationship between this table and the transfer table
     @ManyToOne(fetch = FetchType.LAZY) @JoinColumn(name = "transfer_id", nullable = false) private Transfer transfer;
 
