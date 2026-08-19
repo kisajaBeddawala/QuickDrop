@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './pages/Home'
+
 
 function App() {
 
@@ -7,7 +9,7 @@ function App() {
     <BrowserRouter>
       <div className='app-container'>
         <Routes>
-          <Route path='/' element={<h1>Home page is coming soon....</h1>}/>
+          <Route path='/' element={<Home/>}/>
           <Route path='/room/:code' element={<h1>Room page is coming soon....</h1>}/>
         </Routes>
       </div>

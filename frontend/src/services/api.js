@@ -40,7 +40,7 @@ export const transferServices = {
         const formData = new FormData();
         formData.append('file',file);
 
-        const response = await axios.post(`${API_URL}/${code}/files`,{formData}, 
+        const response = await axios.post(`${API_URL}/${code}/files`,formData, 
             {
                 headers : {"Content-Type": "multipart/form-data"}
             }
