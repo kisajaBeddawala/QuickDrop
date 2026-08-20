@@ -1,0 +1,125 @@
+.room-container {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.room-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.highlight {
+  color: var(--primary);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  height: 600px;
+}
+
+.chat-section, .file-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+.message-bubble {
+  background: var(--primary-glow);
+  padding: 10px 15px;
+  border-radius: 15px;
+  align-self: flex-start;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.message-input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.message-input-area input {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.upload-zone {
+  border: 2px dashed var(--glass-border);
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 20px;
+}
+
+.upload-zone:hover {
+  border-color: var(--primary);
+  background: var(--glass-bg);
+}
+
+.file-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid var(--glass-border);
+  transition: border 0.3s;
+}
+
+.file-card:hover {
+  border-color: var(--primary);
+}
+
+.empty-state {
+  color: #7a7a8c;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Make it responsive for mobile phones! */
+@media (max-width: 768px) {
+  .room-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .chat-section, .file-section {
+    height: 500px;
+  }
+}

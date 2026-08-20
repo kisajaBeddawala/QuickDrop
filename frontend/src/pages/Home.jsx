@@ -14,7 +14,7 @@ function Home(){
             const room = await transferServices.createTransfer();
             navigate(`/room/${room.code}`);
         }catch(error){
-            alert("failed to create room!");
+            console.log("failed to create room!");
         }
     }
 
@@ -25,7 +25,7 @@ function Home(){
             await transferServices.joinTranfer(joinCode);
             navigate(`/room/${joinCode}`)
         }catch(err){
-            alert("Invalid code or room doesn't exist!")
+            console.log("Invalid code or room doesn't exist!")
         }
     }
 

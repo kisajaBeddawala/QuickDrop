@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
+import TransferRoom from './pages/TransferRoom'
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <div className='app-container'>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/room/:code' element={<h1>Room page is coming soon....</h1>}/>
+          <Route path='/room/:code' element={<TransferRoom/>}/>
         </Routes>
       </div>
     </BrowserRouter>
